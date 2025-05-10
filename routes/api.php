@@ -7,6 +7,7 @@ use App\Http\Controllers\VideoController;
 
 Route::post('/upload-video', [VideoController::class, 'upload']);
 Route::post('/delete-video', [VideoController::class, 'delete']);
+Route::get('all-videos', [VideoController::class, 'allVideos']);
 
 // Route::get('/user', function (Request $request) {
 //     return $request->user();
