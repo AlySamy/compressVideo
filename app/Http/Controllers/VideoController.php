@@ -98,10 +98,14 @@ class VideoController extends Controller
             $format = new \FFMpeg\Format\Video\X264('libmp3lame', 'libx264');
             $format->setAudioKiloBitrate(128);
             $format->setAdditionalParameters([
-                '-crf',
+                 '-crf',
                 '28',
                 '-preset',
-                'medium'
+                'medium',
+                '-c:a',
+                'aac',
+                '-c:v',
+                'libx264'
             ]);
 
             $directory = pathinfo($filePath, PATHINFO_DIRNAME);
